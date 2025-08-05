@@ -27,18 +27,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
 // Contact form handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -251,7 +239,7 @@ window.addEventListener('scroll', updateActiveNavLink);
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
-        color: #2563eb !important;
+        color: #60a5fa !important;
     }
     .nav-link.active::after {
         width: 100% !important;
