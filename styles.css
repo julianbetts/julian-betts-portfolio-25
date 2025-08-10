@@ -197,26 +197,40 @@ body {
     animation: fadeInRight 1s ease 0.8s both;
 }
 
-.code-animation {
-    background: rgba(15, 23, 42, 0.8);
-    padding: 2rem;
-    border-radius: 12px;
-    font-family: 'Courier New', monospace;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    backdrop-filter: blur(10px);
-    border: 1px solid #334155;
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    border: 3px solid #60a5fa;
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
+    transition: all 0.3s ease;
 }
 
-.code-line {
-    color: #e2e8f0;
-    animation: typewriter 2s ease-in-out infinite;
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(96, 165, 250, 0.4);
 }
 
-.code-line:nth-child(2) { animation-delay: 0.5s; }
-.code-line:nth-child(3) { animation-delay: 1s; }
-.code-line:nth-child(4) { animation-delay: 1.5s; }
-.code-line:nth-child(5) { animation-delay: 2s; }
+.photo-placeholder {
+    text-align: center;
+    color: #60a5fa;
+}
+
+.photo-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.photo-placeholder p {
+    font-size: 1rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
 
 /* Section Styles */
 section {
@@ -625,6 +639,11 @@ section {
         gap: 2rem;
     }
 
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -666,6 +685,15 @@ section {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-placeholder i {
+        font-size: 3rem;
     }
 
     .hero-title {
