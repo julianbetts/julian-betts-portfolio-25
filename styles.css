@@ -433,24 +433,26 @@ section {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
     border: 1px solid #475569;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
 }
 
 .skill-item i {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #60a5fa;
+    flex-shrink: 0;
 }
 
 .skill-item span {
     font-weight: 500;
     color: #d1d5db;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Contact Section */
@@ -504,6 +506,17 @@ section {
 .contact-item span {
     color: #d1d5db;
     font-weight: 500;
+}
+
+.contact-link {
+    color: #d1d5db;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #60a5fa;
 }
 
 .contact-form {
