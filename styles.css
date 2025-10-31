@@ -699,6 +699,18 @@ section {
     .footer-links {
         justify-content: center;
     }
+
+    .content-card .project-image {
+        height: 200px;
+    }
+
+    .content-card .project-content {
+        padding: 1.5rem;
+    }
+
+    .content-card .project-content h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* Content Websites Page Specific Styles */
@@ -748,6 +760,23 @@ section {
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .content-card .project-image {
+        height: 180px;
+    }
+
+    .content-card .project-content {
+        padding: 1.25rem;
+    }
+
+    .content-card .project-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .content-card .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
     }
 } 
 
