@@ -326,7 +326,7 @@ section {
 }
 
 .project-image {
-    height: 400px;
+    height: 300px;
     background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
     display: flex;
     align-items: center;
@@ -436,7 +436,7 @@ section {
 .skill-item {
     background: #334155;
     padding: 1.5rem;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     border: 1px solid #475569;
@@ -724,16 +724,19 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     border: 1px solid var(--color-border-primary);
+    /* height: 900px; */
 }
-
+/* 
 .content-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
-}
+} */
 
 .content-card:hover .project-screenshot {
     transform: scale(1.1);
 }
+
+
 
 @media (max-width: 480px) {
     .container {
