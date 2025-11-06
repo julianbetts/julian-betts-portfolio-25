@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact form handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
@@ -50,9 +50,25 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission (replace with actual form handling)
-        showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        this.reset();
+        // Submit to Formspree
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+                this.reset();
+            } else {
+                showNotification('Oops! There was a problem submitting your form. Please try again.', 'error');
+            }
+        } catch (error) {
+            showNotification('Oops! There was a problem submitting your form. Please try again.', 'error');
+        }
     });
 }
 
